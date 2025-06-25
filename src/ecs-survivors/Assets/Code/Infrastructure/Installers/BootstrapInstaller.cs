@@ -3,6 +3,7 @@ using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Common.Random;
 using Code.Gameplay.Common.Time;
+using Code.Gameplay.Input.Service;
 using Code.Gameplay.Levels;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Identifiers;
@@ -69,13 +70,13 @@ namespace Code.Infrastructure.Installers
 
         private void BindInputService()
         {
-            // Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
+            Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
         }
 
         public void Initialize()
         {
             // Container.Resolve<IStaticDataService>().LoadAll();
-            // Container.Resolve<ISceneLoader>().LoadScene(Scene.SimpleScena);
+            Container.Resolve<ISceneLoader>().LoadScene(Scenes.Main);
         }
     }
 }

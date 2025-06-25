@@ -13,15 +13,19 @@ public static class GameComponentsLookup {
     public const int Direction = 2;
     public const int Moving = 3;
     public const int Speed = 4;
+    public const int AxisInput = 5;
+    public const int Input = 6;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "Id",
         "WorldPosition",
         "Direction",
         "Moving",
-        "Speed"
+        "Speed",
+        "AxisInput",
+        "Input"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -29,6 +33,8 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.WorldPosition),
         typeof(Code.Gameplay.Features.Movement.Direction),
         typeof(Code.Gameplay.Features.Movement.Moving),
-        typeof(Code.Gameplay.Features.Movement.Speed)
+        typeof(Code.Gameplay.Features.Movement.Speed),
+        typeof(Code.Gameplay.Input.AxisInput),
+        typeof(Code.Gameplay.Input.Input)
     };
 }
